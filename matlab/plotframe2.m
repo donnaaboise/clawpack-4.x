@@ -257,12 +257,8 @@ for ng = 1:ngrids,
     [xcm,ycm] = meshgrid(xcenter,ycenter);
 
     if (usermap1d == 1)
-      if (mappedgrid == 1)
-	[xpm,ypm] = mapc2p(xcm,ycm);
-        [rvec,qvec] = map1d(xpm,ypm,qmesh);
-      else
-        [rvec,qvec] = map1d(xcm,ycm,qmesh);
-      end
+      % Users should call mapc2p from inside of map1d.
+      [rvec,qvec] = map1d(xcm,ycm,qmesh);
       [rs,cs] = size(rvec);
       [rq,cq] = size(qvec);
       if (cs > 1 | cq > 1)
@@ -285,11 +281,11 @@ for ng = 1:ngrids,
 
   end; % end of plotting for PlotType == 4
 
-if exist('aftergrid')==2
-  % make an m-file with this name for any other commands you
-  % want executed at the end of drawing each grid
-  aftergrid;
-end;
+  if exist('aftergrid') == 2
+    % make an m-file with this name for any other commands you
+    % want executed at the end of drawing each grid
+    aftergrid;
+  end;
 
 end % loop on ng (plot commands for each grid)
 %=============================================
