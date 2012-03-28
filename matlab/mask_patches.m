@@ -2,8 +2,8 @@ function mask_patches(slice,sdir,level, xlow,xhigh,ylow,yhigh,zlow,zhigh)
 
 % Internal matlab routine for Clawpack graphics.
 
-% This masks out any patches that are directly underneath the current
-% set of patches to be plotted.
+% This masks out any patches on level 'level' - 1 and below that are in the
+% region [xlow,xhigh]x[ylow,yhigh]x[zlow,zhigh].
 
 if (level == 1)
   % Nothing to mask in this case
