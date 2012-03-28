@@ -38,7 +38,7 @@ end
 
 set_value('maxlevels','MaxLevels',6);
 
-if (~exist('plotstyle'))
+if (exist('plotstyle'))
   % Parse line spec style
   disp([' *** plotframe1 : ''plotstyle'' should be replaced by ',...
         '''PlotStyle''.  Set SETPLOTSTYLE.']);
@@ -129,16 +129,17 @@ for ng = 1:length(amrdata),
 	linecolors{level},linestyle{level});
   end;
 
-if exist('aftergrid')==2
-  % make an m-file with this name for any other commands you
-  % want executed at the end of drawing each grid
-  aftergrid;
-end;
+  if exist('aftergrid') == 2
+    % make an m-file with this name for any other commands you
+    % want executed at the end of drawing each grid
+    aftergrid;
+  end;
 
 end  % loop on ng
 
 % add title and labels:
 if UserVariable == 1
+  % q has been computed using user's file.
   str = sprintf('%s at time %8.4f',UserVariableFile,t);
   title(str,'fontsize',15);
 elseif (nplots == 1)
