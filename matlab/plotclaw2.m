@@ -61,8 +61,6 @@ end
 % MAIN LOOP ON FRAMES:
 %=============================================
 
-Frame = -1;  % initialize frame counter
-
 if ~exist('MaxFrames')
    disp('MaxFrames parameter not set... you may need to execute setplot2')
    break
