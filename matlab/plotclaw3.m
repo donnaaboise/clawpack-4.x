@@ -53,24 +53,22 @@ if strcmp(whichfile,'')
     setprob
   end
 
-set_value('frameinc','plot_interval',1);
-set_value('outputdir','OutputDir','./');
-set_value('outputflag','OutputFlag','ascii');
-set_value('outputprefix','plot_prefix','pltstate');
-
 %=============================================
 % MAIN LOOP ON FRAMES:
 %=============================================
 
-Frame = -1;  % initialize frame counter
-
-clear amrdata;
-Frame = -frameinc;
 if ~exist('MaxFrames')
   disp('MaxFrames parameter not set... you may need to execute setplot3')
   break;
 end
 
+set_value('frameinc','plot_interval',1);
+set_value('outputdir','OutputDir','./');
+set_value('outputflag','OutputFlag','ascii');
+set_value('outputprefix','plot_prefix','pltstate');
+
+clear amrdata;
+Frame = -frameinc;  % initialize frame counter
 while Frame <= MaxFrames
 
   % pause for input from user to determine if we go to next frame,
