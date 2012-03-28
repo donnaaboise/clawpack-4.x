@@ -84,6 +84,7 @@ if (mappedgrid == 1 | manifold == 1)
   end;
   set(p,'Vertices',v);
 end;
+userdata.phys_vertices = v;
 
 
 % -------------------------------------------------------

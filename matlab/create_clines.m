@@ -44,6 +44,7 @@ while (1)
       creatingclines = 0;
     end;
   end;
+  udata.phys_vertices = [xdata', ydata', zdata'];
 
   h(line_cnt) = line('XData',xdata,'YData',ydata,'ZData',zdata,'Color','k');
   set(h(line_cnt),'Tag','on');
@@ -54,3 +55,5 @@ while (1)
     return;
   end;
 end;
+
+set_clines(h);

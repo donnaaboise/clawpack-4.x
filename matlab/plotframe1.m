@@ -38,7 +38,7 @@ end
 
 set_value('maxlevels','MaxLevels',6);
 
-if (~exist('PlotStyle') & exist('plotstyle'))
+if (~exist('plotstyle'))
   % Parse line spec style
   disp([' *** plotframe1 : ''plotstyle'' should be replaced by ',...
         '''PlotStyle''.  Set SETPLOTSTYLE.']);
@@ -107,8 +107,8 @@ for ng = 1:length(amrdata),
   % for compatibility with old matlab41/plotframe1 convention:
   x = xcenter;
 
-  qmin = min([min(q), qmin]);
-  qmax = max([max(q), qmax]);
+  qmin = min([q, qmin]);
+  qmax = max([q, qmax]);
 
   nplots = size(q,2);
   if (mappedgrid == 1)

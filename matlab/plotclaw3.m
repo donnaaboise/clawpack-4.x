@@ -53,8 +53,10 @@ if strcmp(whichfile,'')
     setprob
   end
 
+set_value('frameinc','plot_interval',1);
 set_value('outputdir','OutputDir','./');
 set_value('outputflag','OutputFlag','ascii');
+set_value('outputprefix','plot_prefix','pltstate');
 
 %=============================================
 % MAIN LOOP ON FRAMES:
@@ -62,6 +64,8 @@ set_value('outputflag','OutputFlag','ascii');
 
 Frame = -1;  % initialize frame counter
 
+clear amrdata;
+Frame = -frameinc;
 if ~exist('MaxFrames')
   disp('MaxFrames parameter not set... you may need to execute setplot3')
   break;
@@ -76,7 +80,8 @@ while Frame <= MaxFrames
   queryframe  % this changes value of Frame
 
   if (old_Frame ~= Frame | isempty(amrdata))
-    [amrdata,t] = readamrdata(clawdim,Frame,outputdir,outputflag);
+    [amrdata,t] = readamrdata(clawdim,Frame,outputdir,outputflag,...
+	outputprefix);
   end;
 
   plotframe3;
