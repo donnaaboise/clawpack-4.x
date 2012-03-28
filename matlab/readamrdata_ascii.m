@@ -9,6 +9,9 @@ fname(length(dir)+6) = 't';
 if ~exist(fname)
   amr = {};
   t = [];
+  disp(' ');
+  disp(['Frame ',num2str(Frame),' (',fname,') does not exist ***']);
+  disp(' ');
   return;
 end
 
