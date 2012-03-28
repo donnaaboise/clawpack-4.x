@@ -39,7 +39,7 @@
 %      hidepatchborders       - hides patch borders
 %      showmesh               - shows a coarsened mesh on specified levels
 %      hidemesh               - hides a coarsened mesh on specified levels
-%      mappedgrid             - parameter for plotting mapped grids.
+%      mappedgrid             - help 'mappedgrid'  for information on plotting mapped grids.
 %      setcolors              - gives user control over how colors are set
 %      setopengl              - Sets OpenGL renderer
 %      showslices             - shows slices/manifold
@@ -51,6 +51,10 @@
 %      rybcolormap            - red/yellow/blue colormap
 %      getblocknumber         - get block number for plotting results of
 %                               multi-block calculations.
+%      setgridlinecolor       - sets color of grid lines
+%      setcontourlinecolor    - sets color of contour lines
+%      setpatchbordercolor    - sets color of patch borders.
+%      drawcontourlines       - draws contour lines on slices.
 %
 % 2d specific graphics routines
 %
