@@ -1,4 +1,4 @@
-function mask_patches(p,sdir,xlow,xhigh,ylow,yhigh,zlow,zhigh)
+function mask_patch(p,sdir,xlow,xhigh,ylow,yhigh,zlow,zhigh)
 
 % Internal matlab routine for Clawpack graphics.
 
