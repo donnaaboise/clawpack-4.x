@@ -71,6 +71,7 @@ end;
 % vertices to physical coordinates.
 v = get(p,'Vertices');
 userdata.cartCoords = v;
+
 if (mappedgrid == 1 | manifold == 1)
   if (mappedgrid == 1)
     if (nargin('mapc2p') == 2)
@@ -85,7 +86,6 @@ if (mappedgrid == 1 | manifold == 1)
   set(p,'Vertices',v);
 end;
 userdata.phys_vertices = v;
-
 
 % -------------------------------------------------------
 % Now create and store some other graphic objects that are associated with
@@ -113,6 +113,9 @@ userdata.yzIntersect = [];
 
 % Patch borders,
 userdata.border  = create_border(sdir, sval, xe,ye,ze,mappedgrid,manifold);
+
+% Gridline colors
+userdata.edgecolor = 'k';
 
 % Set patch UserData.
 set(p,'UserData',userdata);

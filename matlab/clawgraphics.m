@@ -39,7 +39,7 @@
 %      hidepatchborders       - hides patch borders
 %      showmesh               - shows a coarsened mesh on specified levels
 %      hidemesh               - hides a coarsened mesh on specified levels
-%      mappedgrid             - help 'mappedgrid'  for information on plotting mapped grids.
+%      mappedgrid             - help 'mappedgrid' for information on plotting mapped grids.
 %      setcolors              - gives user control over how colors are set
 %      setopengl              - Sets OpenGL renderer
 %      showslices             - shows slices/manifold
