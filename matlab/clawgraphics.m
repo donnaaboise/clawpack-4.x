@@ -14,15 +14,15 @@
 %                               useful for adding a 1d plot to existing plot
 %      setplotstyle           - sets symbols and colors for line/scatter plots
 %      queryframe             - queries user for next frame information
-%      NoQuery                - setting NoQuery=1 avoids query between plots
+%                               Setting parameter NoQuery=1 avoids query
+%                               between plots.
 %      getlegendinfo          - returns legend information on line plots.
 %      printgif               - prints a gif file from current figure
 %      printjpg               - prints a jpg file from current figure
 %      makeframegif           - print current figure to file frame0000N.gif
 %      makeframejpg           - print current figure to file frame0000N.jpg
-%                                 where N = current value of Frame counter.
 %
-% Data analysis routines (for use with UserVariable==1)
+% Data analysis routines (for use with UserVariable = 1)
 %      pressure               - returns pressure given input data (gamma law)
 %      xvelocity              - returns x velocity
 %      yvelocity              - returns y velocity
