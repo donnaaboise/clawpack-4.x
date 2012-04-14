@@ -94,7 +94,8 @@ userdata.phys_vertices = v;
 % Contour lines.
 userdata.contourLines = [];
 if (~isempty(contourlevels))
-  c = contourc(yc_like,zc_like,qcm2,contourlevels,'k');
+  % Removed 'k' argument to contourc
+  c = contourc(yc_like,zc_like,qcm2,contourlevels);
   userdata.contourLines = create_clines(c,sval,sdir,mappedgrid,manifold);
 end;
 
